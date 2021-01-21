@@ -1,0 +1,77 @@
+puts
+====
+puts expects a String
+
+Strings
+=======
+Type casting => to_s
+String interpolation in Ruby
+"this is a String #{variable}"
+Remember that in javascript string interpolation is only allowed with ``
+
+string <=> other_string → -1, 0, +1 or nil => Comparison—Returns -1, 0, +1 or nil depending on whether string is less than, equal to, or greater than other_string.
+
+Regex
+=====
+sintaxis: regexp = %r{\w+}
+ejemplo 
+    > prueba = %r{\w{5}}
+    > "blabla".match? prueba
+    > => true
+    
+str =~ obj → fixnum or nil => If obj is a Regexp, use it as a pattern to match against str,and returns the position the match starts
+    \w is equivalent to [0-9a-zA-Z_]
+    \d is the same as [0-9]
+    \s matches white space (tabs, regular space, newline)
+There is also the negative form of these:
+    \W anything that’s not in [0-9a-zA-Z_]
+    \D anything that’s not a number
+    \S anything that’s not a space
+The dot character . matches everything but new lines. If you need to use a literal . then you will have to escape it.
+Modifier 	Description
++ 	1 or more
+* 	0 or more
+? 	0 or 1
+{3,5} 	between 3 and 5
+
+More on https://www.rubyguides.com/2015/06/ruby-regex/
+
+Arrays
+======
+
+Array.each do |value|
+Array.each_with_index do |value, index|
+
+Unary functions
+===============
+A unary function is a function that takes one argument. 
+
+Setters and getters
+===================
+
+Question: Why =() in the setter?
+
+class Dog
+  attr_reader :name
+
+  def initialize(name)
+    @name = name
+  end
+
+  def name1=(str)
+    @name = str
+  end
+
+  def name2(str)
+    @name = str
+  end
+end
+
+d = Dog.new("Rover")
+puts d.name  #=>Rover
+d.name1 = "Ruthie"
+puts d.name  #=>Ruthie
+d.name2("John")
+puts d.name  #=>John
+d.name2 = "Roger"
+

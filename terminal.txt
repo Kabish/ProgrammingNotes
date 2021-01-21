@@ -1,0 +1,4 @@
+clear => cleans terminal
+pwd => print working directory, current directory
+mkdir => create directory
+touch => create new file

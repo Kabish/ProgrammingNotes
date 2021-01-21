@@ -1,0 +1,6 @@
+Example #Array.zip
+
+zip(arg,...) -> new_ary
+See the (arg,…)? That ‘…’ indicates that you can add as many arguments as you want, meaning that you 
+can combine as many arrays as you need to in one go. If we could only add one, like in some other methods, 
+it would be written zip(arg).
